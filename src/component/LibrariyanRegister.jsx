@@ -5,7 +5,7 @@ function LibrariyanRegister() {
   
             <div className='container border border-primary border-1 p-2 my-3 '>
             <form>
-            <h1 className='bg-warning p-3 text-$indigo-900 text-center'> Add User</h1>
+            <h1 className='bg-warning p-3 text-$indigo-900 text-center'>Librariyan Registrayion</h1>
                 <div className="mb-3">
                     
                     {/* User Id */}
