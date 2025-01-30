@@ -1,52 +1,102 @@
-import React from 'react'
+import React from 'react';
+import { addMembers } from '../Services/MemberService';
+import { toast, ToastContainer } from 'react-toastify';
 
-function UserResgister() 
-{
+
+
+
+function UserRegistration() {
+
+  const submitHandler=(e)=>{
+
+   e.preventDefault();
+   addMembers({
+
+    email:e.target.email.value,
+    fullName:e.target.fullName.value,
+    username:e.target.username.value,
+    password:e.target.password.value,
+    phoneNumber:e.target.phoneNumber.value
+   }).then(data=>{
+    return data;
+   }).then(()=>{
+    toast.success("Registered Succesfully!");
+    e.target.reset();
+   })
+
+  }
+
   return (
-    <div className='container border border-primary border-1 p-2 my-3 '>
-            <form>
-            <h1 className='bg-warning p-3 text-$indigo-900 text-center'> Add User</h1>
-                <div className="mb-3">
-                    
-                    {/* User Id */}
-                    <label for="exampleInputEmail1" className="form-label">User Id</label>
-                    <input type="number" className="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp" name='userId' />
-                </div>
-                <div className="mb-3">
-                    {/* User Name */}
-                    <label for="exampleInputEmail1" className="form-label">User Name</label>
-                    <input type="text" className="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp" name='userName' />
-                </div>
-                <div className="mb-3">
-                    {/* User Email */}
-                    <label for="exampleInputEmail1" className="form-label">User Email</label>
-                    <input type="email" className="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp" name='userEmail' />
-                </div>
-                <div className="mb-3">
-                    {/* User Password */}
-                    <label for="exampleInputEmail1" className="form-label">User Password</label>
-                    <input type="password" className="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp" name='userPassword' />
-                </div>
-                <div className="mb-3">
-                    {/* User Role */}
-                    <label for="exampleInputEmail1" className="form-label">User Role</label>
-                    <input type="text" className="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp" name='userRole' />
-                </div>
-                <div className="mb-3">
-                    {/* User PhoneNumber */}
-                    <label for="exampleInputEmail1" className="form-label">User PhoneNumber</label>
-                    <input type="number" className="form-control" id="exampleInputEmail1"
-                        aria-describedby="emailHelp" name='userphoneNumber' />
-                </div>
-                <button type='submit' className='bg-warning p-3 text-$indigo-900 text-center'>Submit</button>
-            </form>
-        </div>
-  )    
+    <div className="registration-container">
+      <div className="registration-card">
+        <h1 className="app-logo">UserRegistration</h1>
+        
+        <form className="registration-form" onSubmit={submitHandler}>
+          {/* Email */}
+          <div className="form-group">
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+
+          {/* Full Name */}
+          <div className="form-group">
+            <input
+              type="text"
+              name="fullName"
+              placeholder="Full Name"
+              required
+            />
+          </div>
+
+          {/* Username */}
+          <div className="form-group">
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              required
+            />
+          </div>
+
+          {/* Password */}
+          <div className="form-group">
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+
+           {/* phoneNumber */}
+           <div className="form-group">
+            <input
+              type="tel"
+              name="PhoneNumber"
+              placeholder="PhoneNumber"
+              required
+            />
+          </div>
+
+          {/* Submit Button */}
+          <button type="submit" className="submit-button">
+            Sign up
+          </button>
+        </form>
+
+        
+      </div>
+
+      <div className="login-redirect">
+        Have an account? <a href="/login">Log in</a>
+      </div>
+      <ToastContainer/>
+    </div>
+  );
 }
 
-export default UserResgister
+export default UserRegistration;

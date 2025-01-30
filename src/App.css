@@ -37,16 +37,6 @@
   }
 }
 
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  
-}
-
-
 header, footer {
   background-color: #333;
   color: white;
@@ -69,23 +59,25 @@ h1 {
   padding: 0;
 }
 
-.nav-links li {
-  display: inline;
+/* .nav-links li {
+  display: flex;
   margin: 0 15px;
-}
+} */
 
 .nav-links a {
   color: white;
   text-decoration: none;
+  margin: 15px;
 }
 
 .nav-links a:hover {
   text-decoration: underline;
 }
 
+
 /* Home Page */
 /* Hero Section */
-.hero {
+ .hero {
   height: 100vh;
   background-image: url('../src/images/photos/library_1.jpg');
   background-size: cover;
@@ -96,7 +88,9 @@ h1 {
   text-align: center;
   color: white;
   position: relative;
-}
+} 
+
+
 
 .hero::before {
   content: '';
@@ -114,6 +108,14 @@ h1 {
   padding: 20px;
   max-width: 800px;
 }
+
+.hero-content h2{
+  font-weight: bold;
+  color: white;
+  text-decoration: underline;
+  font-size: 35px;
+}
+ 
 
 h1 {
   font-size: 3.5rem;
@@ -138,7 +140,7 @@ p {
 
 .cta-button:hover {
   background-color: #0056b3;
-}
+} 
 
 /* About Section */
 .about-section, .services-section, .contact-section {
@@ -159,10 +161,10 @@ padding: 0;
 .services-section li {
 font-size: 1.2em;
 margin-bottom: 0.5em;
-}
+} 
 
 /* Footer */
-.footer {
+ .footer {
 background-color: #333;
 color: white;
 padding: 1em;
@@ -171,10 +173,10 @@ text-align: center;
 
 .footer p {
 margin: 0;
-}
+} 
 
 /* About Section */
-.about-section, .services-section, .contact-section {
+ .about-section, .services-section, .contact-section {
   padding: 3em 2em;
   background-color: #fff;
 }
@@ -192,10 +194,10 @@ margin: 0;
 .services-section li {
   font-size: 1.2em;
   margin-bottom: 0.5em;
-}
+} 
 
 /* Footer */
-.footer {
+ .footer {
   background-color: #333;
   color: white;
   padding: 1em;
@@ -204,5 +206,440 @@ margin: 0;
 
 .footer p {
   margin: 0;
+} 
+/* card */
+
+.img{
+  height: 80px;
+  width: 100px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+} 
+
+/* Card Container */
+ .col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+} 
+
+/* Card Styling */
+ .card {
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  overflow: hidden;
+  max-width: 500px;
+  height: 500px;
+  margin: 20px auto;
+  flex: 1 1 calc(50% - 20px); 
+} 
+
+/* Card Hover Effect */
+ .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(126, 52, 183, 0.2);
+} 
+
+/* Card Image */
+ .card-img-top {
+  height: 50%;
+  width: 100%;
+  object-fit: "";
+  border-bottom: 2px solid #1b24c2;
+} 
+
+/* Card Body */
+.card-body {
+  padding: 40px;
+  text-align: center;
+} 
+
+/* Card Title */
+ .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #191313;
+  text-decoration:dotted;
+} 
+
+/* Card Text */
+ .card-text {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #171313;
+} 
+
+/* Button Styling */
+ .btn {
+  background-color: #4e349b;
+  color: #171313;
+  font-weight: bold;
+  border: none;
+  padding: 20px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+} 
+.btn-1{
+  background-color: blueviolet;
+  color: rgb(21, 21, 20);
+  font-weight: bold;
+  border: none;
+  padding: 20px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn-2{
+  color: #171313;
+  font-weight: bold;
+  border: none;
+  padding: 20px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.showForm{
+  background-color: #4e349b;
+  color: #eff2f7;
+  font-weight: bold;
+  border: none;
+  padding: 20px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+} 
+
+
+
+/* Button Hover Effect */
+.btn:hover {
+  background-color: #e0a800;
+  transform: scale(1.05);
+} 
+.btn-1:hover{
+  background-color: rgb(38, 238, 45);
+  transform: scale(1.05) ;
+}
+.btn-2:hover{
+  background-color: #e0a800;
+}
+.showForm:hover{
+  background-color: #e0a800;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    max-width: 90%;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    padding: 8px 15px;
+  }
+} 
+
+/* General Reset */
+ 
+
+/* Container for the form */
+ .registration-container {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+} 
+
+/* Title of the form */
+ .registration-container h1 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+  
+} 
+
+/* Form inputs */
+ .registration-container .form-group {
+  margin-bottom: 25px;
+  
+}
+
+.registration-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.registration-container .form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.registration-container .form-group input:focus {
+  border-color: #d33fd8;
+  box-shadow: 0px 0px 5px rgba(106, 17, 203, 0.5);
+} 
+
+/* Submit button */
+ .registration-container .submit-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.registration-container .submit-button:hover {
+  background: linear-gradient(135deg, #ac2bb3, #d82121);
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 10px rgba(106, 17, 203, 0.4);
+} 
+
+/* Link to login */
+ .registration-container .login-redirect {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.registration-container .login-redirect a {
+  color: #4064e3;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.registration-container .login-redirect a:hover {
+  text-decoration: underline;
+}
+ 
+/* Card */
+.container {
+  display: flex;  /* Flex layout for sorting and book items */
+  gap: 20px;  /* Space between the sorting and book items */
+  margin: 20px;
+}
+
+/* Sorting Container */
+.sorting-container {
+  width: 500px;  /* Fixed width for sorting options */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for list items in the sorting section */
+.list-group-item {
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #333;
+  font-weight: bold;
+  padding: 12px 20px;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 5px;
+}
+
+.list-group-item:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.05);
+}
+
+.list-group-item:active {
+  background-color: #ddd;
+}
+
+
+.menu-items-container{
+  margin-left: 40px;
+}
+/* Menu Items Container - Grid Layout for 3 images per row */
+.menu-items-container {
+  margin-left: 20px;
+  flex-grow: 1;  /* Take up remaining space */
+  display: grid;  /* Use grid layout for items */
+  grid-template-columns: repeat(3, 1fr);  /* 3 items per row */
+  gap: 10px;  /* Space between the items */
+}
+
+/* Menu Card (Item) Styles */
+.menu-card {
+  width: 300px;  /* Take full width of the grid cell */
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-left: 10px;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.menu-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: transform 0.3s ease;
+}
+
+.menu-img:hover {
+  transform: scale(1.05);
+}
+
+.menu-name {
+  font-size: 1.4265rem;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.menu-price {
+  font-size: 1.165rem;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.menu-description {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+.menu-btn {
+  background-color: rgb(55, 55, 148);
+  border-color: skyblue;
+  border-radius: 20px;
+  font-weight: bold;
+  padding: 8px 16px;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.menu-btn:hover {
+  background-color: #d67d4d;
+  border-color: #d67d4d;
+}
+
+/* For mobile view */
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;  /* Stack items vertically on small screens */
+  }
+
+  .sorting-container {
+    width: 100%;  /* Full width on mobile */
+    margin-bottom: 20px;
+  }
+
+  .menu-items-container {
+    width: 100%;  /* Full width on mobile */
+    grid-template-columns: 1fr;  /* 1 item per row on small screens */
+  }
+
+  .menu-card {
+    width: 100%;  /* Full width on mobile */
+    max-width: 100%;  /* No limit on mobile */
+  }
+}
+/*    card end  */
+
+/* login form */
+
+.login-container{
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  
+}
+.login-header{
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+  
+}
+
+.login-container .form-group{
+  margin-bottom: 25px;
+
+}
+
+ .form-group label{
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+
+} 
+
+ .form-group input{
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+
+} 
+
+ .form-group input:focus {
+  border-color: #d33fd8;
+  box-shadow: 0px 0px 5px rgba(106, 17, 203, 0.5);
+} 
+
+.forgot-password{
+
+
+}
+.login-footer{
+
 }
 

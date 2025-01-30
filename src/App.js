@@ -7,33 +7,41 @@ import UserResgister from './component/UserResgister';
 import LibrariyanRegister from './component/LibrariyanRegister';
 import HomePage from './component/HomePage';
 import BookRegisteration from './component/BookRegisteration';
+import LoginPage from './component/LoginPage';
+import Member from './component/Members/Member';
+
 //create  routes
 const routes=createBrowserRouter([
 
+// {
+//   path:"/",
+//   element:<> <Navbar/></>
+// }
+
+// {
+//   path:"/userRegister",
+//   element:<><Navbar/> <UserResgister/></>
+// },
+{
+  path:"/librariyanRegister",
+  element:<><Navbar/> <LibrariyanRegister/></>
+},
 {
   path:"/",
   element:<> <Navbar/> <HomePage/></>
 },
 
 {
-  path:"/userRegister",
-  element:<><UserResgister/></>
-},
-{
-  path:"/librariyanRegister",
-  element:<><LibrariyanRegister/></>
-},
-{
-  path:"/home",
-  element:<> <HomePage/> </>
-},
-{
   path:"/book",
-  element:<> <BookRegisteration/></>
+  element:<> <Navbar/> <Book/> </>
 },
 {
-  path:"/namebook",
-  element:<> <Book/> </>
+  path:"/login",
+  element:<> <Navbar/> <LoginPage/> </>
+},
+{
+  path:"/member",
+  element:<><Navbar/> <UserResgister/><Member/> </>
 }
 
 ]);
